@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #F6C794;
+
+}
+.main-container {
+    display: flex;
+    /* border:  1px solid green;  */
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+    resize: both;
+    overflow: auto;
+   
+}
+
+.first-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+ 
+}
+
+.first-container > div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+
+}
+/* This is for the wiggle movement of the image profile */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    25% {
+        transform: rotate(5deg); /* Slight rotation to the right */
+    }
+    50% {
+        transform: rotate(0deg); /* Back to the initial position */
+    }
+    75% {
+        transform: rotate(-5deg); /* Slight rotation to the left */
+    }
+    100% {
+        transform: rotate(0deg); /* Back to the initial position */
+    }
+}
+
+
+.first-container > div > img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    animation: wiggle 0.8s ease-in-out 10;
+    
+}
+
+.first-container > div > p {
+    width: 10rem;
+    font-size: 1.1rem;
+    
+}
+.first-container > div > p > span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.first-container > button {
+    width: 14rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: hsl(220, 92%, 60%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    cursor: pointer;
+}
+
+.first-container > button:hover {
+    background-color: hsl(220, 92%, 50%);
+    animation: wiggle 0.8s ease-in-out 10;
+    
+}
+.first-container > button:active {
+    background-color: hsl(220, 92%, 40%);
+}
+
+.second-container {
+    width: 500px;
+    height: 500px;
+    border: 5px solid hsl(220, 92%, 60%);
+    border-radius: 0.5rem;
+
+}
