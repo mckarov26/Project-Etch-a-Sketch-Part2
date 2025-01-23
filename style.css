@@ -59,14 +59,18 @@
     
 }
 
-.first-container > div > p {
+.first-container > div > div > p {
     width: 10rem;
     font-size: 1.1rem;
     
 }
-.first-container > div > p > span {
+.first-container > div > div > p > span {
     font-weight: bold;
     font-size: 1.2rem;
+}
+.first-container > div > div > #info {
+    width: 10rem;
+    font-size: 1.1rem;
 }
 
 .first-container > button {
@@ -90,9 +94,9 @@
 }
 
 .second-container {
-    width: 500px;
-    height: 500px;
-    border: 5px solid hsl(220, 92%, 60%);
+    width: 32rem;
+    height: 32rem;
+    border: 0.3rem solid hsl(220, 92%, 60%);
     border-radius: 0.5rem;
 
 }
