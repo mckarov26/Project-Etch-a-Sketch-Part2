@@ -34,3 +34,8 @@ function getRandomColor() {
 
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+//Function to get black color for the grids.
+function getBlackColor() {
+    return rgb(0, 0, 0);
+}
