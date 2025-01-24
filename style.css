@@ -107,7 +107,7 @@
 }
 
 .cell {
-    display: flex;
+    /* display: flex; */
     flex: 0 0 calc(100% / var(--size));
     height: calc(100% / var(--size));
     gap: 0.3rem;
