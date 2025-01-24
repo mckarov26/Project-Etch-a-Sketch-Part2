@@ -22,7 +22,7 @@ buttonSize.addEventListener("click", () => {
 //Function to get the size of grid from the user using prompt and to display the grid-size. 
 function getSize() {
 
- // Important! : This will ensure all cells that are previously created  when this function is invoked again. 
+ // Important! : This will ensure all cells that are previously created are removed when this function is invoked again. 
  // Example, if you input 12x12 squares or any number. it will store the value to the sizeOfSquare variable above. then if
  // you invoked again this function with a value < 0 and value > 100, it wont generate broken grid cells. 
     sizeOfSquare = 0;
