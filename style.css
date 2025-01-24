@@ -99,4 +99,17 @@
     border: 0.3rem solid hsl(220, 92%, 60%);
     border-radius: 0.5rem;
 
+    /* This is to ensure that when there is a cell generated inside the container, the cell will generate row direction
+    and to make sure they will move to next row when the first row is full! */
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.cell {
+    display: flex;
+    flex: 0 0 calc(100% / var(--size));
+    height: calc(100% / var(--size));
+    gap: 0.3rem;
+    border: 0.1rem solid hsl(220, 92%, 60%);    
 }
