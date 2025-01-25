@@ -19,6 +19,41 @@ buttonSize.addEventListener("click", () => {
   
 })
 
+// Add Event Listener to generate random color on each cell.
+buttonColor.addEventListener("click", () => {
+    
+    const cells = document.querySelectorAll(".cell");
+
+    cells.forEach(cell => {
+        cell.addEventListener("mouseover", () => {
+            cell.style["background-color"] = getRandomColor();
+            
+        })
+
+
+    })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Function to get the size of grid from the user using prompt and to display the grid-size. 
 function getSize() {
 
