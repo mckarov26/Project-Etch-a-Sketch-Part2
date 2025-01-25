@@ -34,24 +34,33 @@ buttonColor.addEventListener("click", () => {
     })
 });
 
-//Add Event Listener to generate black color on each cell
+
 buttonBlack.addEventListener("click", () => {
     const cells = document.querySelectorAll(".cell");
+        //Full Transparent
+    let opacity = 0;
+    let hoverCount = 0;
 
-    cells.forEach(cell => {
+    if (hoverCount < 10) {
+      cells.forEach(cell => {
         cell.addEventListener("mouseover", () => {
-            cell.style["background-color"] = getBlackColor();
-        } )
-        
-    })
+            opacity += 0.1;
+            hoverCount++
+            cell.style["background-color"] = getBlackColor(opacity);
+         })
+      })
+    }
 })
+
+
+
 
 //Add Event Listener to reset all color to its default color on each cell.
 buttonReset.addEventListener("click", () => {
     const cells = document.querySelectorAll(".cell");
 
    cells.forEach(cell => {
-    cell.style["background-color"] = getColorReset() 
+    cell.style["background-color"] = getColorReset();
    })
 })
 
@@ -114,12 +123,14 @@ function getRandomColor() {
 }
 
 //Function to get black color for the grids.
-function getBlackColor() {
-    return "rgb(0, 0, 0)";
+function getBlackColor(opacity) {
+    return `rgb(0, 0, 0, ${opacity})`;
 }
 
 
 // Function to get reset color for the grids.
 function getColorReset() {
-    return "rgb(246, 199, 148)";
+    return "rgba(246, 199, 148)";
 }
+
+
