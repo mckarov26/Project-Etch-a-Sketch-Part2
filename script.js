@@ -34,24 +34,17 @@ buttonColor.addEventListener("click", () => {
     })
 });
 
+//Add Event Listener to generate black color on each cell
+buttonBlack.addEventListener("click", () => {
+    const cells = document.querySelectorAll(".cell");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    cells.forEach(cell => {
+        cell.addEventListener("mouseover", () => {
+            cell.style["background-color"] = getBlackColor();
+        } )
+        
+    })
+})
 
 
 //Function to get the size of grid from the user using prompt and to display the grid-size. 
@@ -112,7 +105,7 @@ function getRandomColor() {
 
 //Function to get black color for the grids.
 function getBlackColor() {
-    return rgb(0, 0, 0);
+    return "rgb(0, 0, 0)";
 }
 
 
