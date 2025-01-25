@@ -46,6 +46,16 @@ buttonBlack.addEventListener("click", () => {
     })
 })
 
+//Add Event Listener to reset all color to its default color on each cell.
+buttonReset.addEventListener("click", () => {
+    const cells = document.querySelectorAll(".cell");
+
+   cells.forEach(cell => {
+    cell.style["background-color"] = getColorReset() 
+   })
+})
+
+
 
 //Function to get the size of grid from the user using prompt and to display the grid-size. 
 function getSize() {
@@ -109,3 +119,7 @@ function getBlackColor() {
 }
 
 
+// Function to get reset color for the grids.
+function getColorReset() {
+    return "rgb(246, 199, 148)";
+}
